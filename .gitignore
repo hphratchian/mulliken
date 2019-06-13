@@ -1,0 +1,10 @@
+Makefile
+*.o
+*.a
+*.exe
+.*.swp
+*~
+*.log
+*.chk
+*.mat
+fort.7

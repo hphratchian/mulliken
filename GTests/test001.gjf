@@ -1,0 +1,11 @@
+%chk=test001
+#p test hf pop=full output=matrix
+
+test001: HF/STO-3G calculation of H2.
+
+0  1
+h
+h  1  0.7
+
+test001.mat
+
