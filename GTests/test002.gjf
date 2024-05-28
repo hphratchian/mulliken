@@ -1,5 +1,5 @@
 %chk=test002
-#p test geom=modela hf pop=full output=matrix
+#p test geom=modela hf pop=(full,orbitals) output=matrix
 
 test002: HF/STO-3G calculation of H2O.
 
