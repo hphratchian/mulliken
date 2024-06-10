@@ -59,24 +59,18 @@
 !     If requested, loop through the gross population values and aggregate gross
 !     populations by angular momentum.
 !
-      write(*,*)
-      call myMullikenGrossPopAO%print(iOut,header='grossPops')
-      write(*,*)
+      call myMullikenGrossPopAO%print(iOut,header='mulliken_analysis_ao: grossPops')
       if(PRESENT(basisFunctionTypeList)) then
         myMullikenGrossPopAngMomentum = 0
         do i = 1, SIZE(myMullikenGrossPopAO)
           tmpReal = myMullikenGrossPopAO%getVal([i])
           tmpInteger = basisFunctionTypeList%getVal([i])
           call basisType2FunctionInfo(tmpInteger,angularMomentum=angularMomentum)
-          write(*,*)' MO i: ',i
-          write(*,*)'        population val  : ',tmpReal
-          write(*,*)'        basis type value: ',tmpInteger
-          write(*,*)'        angular momentum: ',angularMomentum
-          write(*,*)
           myMullikenGrossPopAngMomentum(angularMomentum+1) =  &
             myMullikenGrossPopAngMomentum(angularMomentum+1) + tmpReal
         endDo
-        call mqc_print(myMullikenGrossPopAngMomentum,iOut,header='pops by angular mom')
+        call mqc_print(myMullikenGrossPopAngMomentum,iOut,  &
+          header='mulliken_analysis_ao: pops by angular mom')
       endIf
 !
 !     Fill the possible return arguments that the calling program unit

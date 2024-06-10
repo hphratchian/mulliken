@@ -98,8 +98,6 @@ INCLUDE "mulliken_mod.f03"
 !     If requested, carry out a Mulliken population analysis on a specific
 !     molecular orbital.
 !
-
-!hph
       if(MOanalysis.ne.0) then
         if(MOanalysis.gt.0) then
           tmpVec = CMatrixAlpha%column(MOanalysis)
@@ -116,12 +114,5 @@ INCLUDE "mulliken_mod.f03"
         mullikenGrossPopAO = mullikenGrossPopAO*mullikenGrossPopAO
         call mqc_print(sum(mullikenGrossPopAO),iOut,header='sum of gross pops SQUARED')
       endIf
-!
-!
-!        procedure,public ::column        => MQC_Variable_MatrixGetColumn
-!      function MQC_Variable_MatrixGetColumn(mqcVariable,iColumn)  &
-!hph-
-
-
 !
       end program mulliken
