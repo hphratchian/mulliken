@@ -34,8 +34,9 @@
 !     This subroutine carries out Mulliken analysis. The atomic orbital basis is
 !     assumed. Input arguments are the density matrix (<PMatrix>) and the AO
 !     overlap matrix (<SMatrix>). Optional output arguments are the full
-!     Mulliken matrix in the AO basis (<mullikenMatrixAO>) and gross populations
-!     (<mullikenGrossPopAO>).
+!     Mulliken matrix in the AO basis (<mullikenMatrixAO>), gross populations
+!     over AOs (<mullikenGrossPopAO>), and gross populations over atomic orbital
+!     angular momentum (<basisFunctionTypeList>).
 !
 !
 !     - H. P. Hratchian, 2024.
